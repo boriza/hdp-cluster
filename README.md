@@ -62,11 +62,13 @@ Copy files to VM
 		$ scp YOURFILE.TXT root@one.vm:/YOUR_PATH
 
 HDFS
+```
 		$ hadoop fs -ls /user/
 		$ hadoop fs -put /FROM/YOURFILE.TXT /TO
-
+```
 Spark:
+```
 		$ spark-shell
-
+```
 
 # References:

@@ -56,11 +56,15 @@ You can easily customize the scipt to suit your local host's hardware requiremen
 The Ambari dashboard
 	http://one.vm:8080/#/main/dashboard/metrics
 
+SSH to VM
+```
 		$ ssh root@one.vm
+```
 
 Copy files to VM
+```
 		$ scp YOURFILE.TXT root@one.vm:/YOUR_PATH
-
+```
 HDFS
 ```
 		$ hadoop fs -ls /user/

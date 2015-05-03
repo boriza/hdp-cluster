@@ -8,18 +8,18 @@ include ntp
 
 # Ensure that servers can find themselves even in absence of dns
 class { 'etchosts':
-  ownhostname => 'one.cluster'
+  ownhostname => 'one.vm'
 }
 
 # Install and enable ambari server
 class { 'ambari_server':
-  ownhostname => 'one.cluster'
+  ownhostname => 'one.vm'
 }
 
 # Install and enable ambari agent
 class { 'ambari_agent':
-  ownhostname    => 'one.cluster',
-  serverhostname => 'one.cluster'
+  ownhostname    => 'one.vm',
+  serverhostname => 'one.vm'
 }
 
 # Establish ordering

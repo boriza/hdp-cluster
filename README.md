@@ -1,2 +1,2 @@
-# hdp-cluster
-Provision an HDP cluster
+# hdp-vm
+Provision an HDP vm

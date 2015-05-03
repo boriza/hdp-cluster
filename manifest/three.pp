@@ -7,13 +7,13 @@ include ntp
 
 # Ensure that servers can find themselves even in absence of dns
 class { 'etchosts':
-  ownhostname => 'one.cluster'
+  ownhostname => 'one.vm'
 }
 
 
 class { 'ambari_agent':
-  serverhostname => "one.cluster",
-  ownhostname    => "three.cluster"
+  serverhostname => "one.vm",
+  ownhostname    => "three.vm"
 }
 
 # Establish ordering

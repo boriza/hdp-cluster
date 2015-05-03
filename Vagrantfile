@@ -6,9 +6,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "centos6.4Min"
   config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box"
 
+  # Manage /etc/hosts on host and VMs
+  config.hostmanager.enabled = false
+  config.hostmanager.manage_host = true
+  config.hostmanager.include_offline = true
+  config.hostmanager.ignore_private_ip = false
+
   config.vm.define :one do |one| 
-    one.vm.hostname = "one.cluster"
-    one.vm.network :private_network, ip: "192.168.0.101"
+    one.vm.hostname = "one.vm"
+    one.vm.provision :hostmanager
+    one.vm.network :private_network, ip: "192.168.1.101"
     one.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 4096]
     end
@@ -21,8 +28,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define :two do |two| 
-    two.vm.hostname = "two.cluster"
-    two.vm.network :private_network, ip: "192.168.0.102"
+    two.vm.hostname = "two.vm"
+    two.vm.provision :hostmanager
+    two.vm.network :private_network, ip: "192.168.1.102"
     two.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 2048]
     end
@@ -35,8 +43,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define :three do |three| 
-    three.vm.hostname = "three.cluster"
-    three.vm.network :private_network, ip: "192.168.0.103"
+    three.vm.hostname = "three.vm"
+    three.vm.provision :hostmanager
+    three.vm.network :private_network, ip: "192.168.1.103"
     three.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 2048]
     end
@@ -49,8 +58,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define :four do |four| 
-    four.vm.hostname = "four.cluster"
-    four.vm.network :private_network, ip: "192.168.0.104"
+    four.vm.hostname = "four.vm"
+    four.vm.provision :hostmanager
+    four.vm.network :private_network, ip: "192.168.1.104"
     four.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 2048]
     end

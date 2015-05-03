@@ -1,27 +1,27 @@
-# Ensure that the machines in the cluster can find each other without DNS
+# Ensure that the machines in the vm can find each other without DNS
 class etchosts ($ownhostname) {
   host { 'host_one':
-    name  => 'one.cluster',
-    alias => ['one', 'one.cluster'],
-    ip    => '192.168.0.101'
+    name  => 'one.vm',
+    alias => ['one', 'one.vm'],
+    ip    => '192.168.1.101'
   }
 
   host { 'host_two':
-    name  => 'two.cluster',
-    alias => ['two', 'two.cluster'],
-    ip    => '192.168.0.102'
+    name  => 'two.vm',
+    alias => ['two', 'two.vm'],
+    ip    => '192.168.1.102'
   }
 
   host { 'host_three':
-    name  => 'three.cluster',
-    alias => ['three', 'three.cluster'],
-    ip    => '192.168.0.103'
+    name  => 'three.vm',
+    alias => ['three', 'three.vm'],
+    ip    => '192.168.1.103'
   }
 
   host { 'host_four':
-    name  => 'four.cluster',
-    alias => ['four', 'four.cluster'],
-    ip    => '192.168.0.104'
+    name  => 'four.vm',
+    alias => ['four', 'four.vm'],
+    ip    => '192.168.1.104'
   }
 
   file { 'agent_hostname':

@@ -28,9 +28,9 @@ You can easily customize the scipt to suit your local host's hardware requiremen
 
 # Installation
 
-1) Install prerequisites
+1) Install pre-requisites
 
-2) In a directory of your choice run 
+2) In the directory of your choice run 
 
 		$ git clone https://github.com/boriza/hdp-cluster.git
 		$ cd hdp-cluster

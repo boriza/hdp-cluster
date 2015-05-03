@@ -39,6 +39,7 @@ You can easily customize the scipt to suit your local host's hardware requiremen
 3) Browse http://one.vm:8080/
 
 4) Follow the installation wizard
+```
 		- Select Stack 2.2
 		- Install options 
 			target hosts:
@@ -50,7 +51,7 @@ You can easily customize the scipt to suit your local host's hardware requiremen
      		evenly distribute services across your VMs considering hardware requirements
      	Assign Slaves and Clients
 			Customize Services with your password or choose 'vagrant' 
-
+```
 
 # Getting started
 The Ambari dashboard

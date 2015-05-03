@@ -1,5 +1,5 @@
-# Hortonworks HDP Automatic Provisioning with Vagrant
-Automatic provisioning of four node Hortonworks HDP 2.x cluster using Vagrant
+# Hortonworks HDP cluster automatic provisioning with Vagrant
+Automatic provisioning of four node Hortonworks HDP 2.x cluster using Vagrant on VirtualBox
 
 The script is going to automatically create and start four VirtualBox CentOS VMs and have them configured to run an Ambari installation of HDP
 

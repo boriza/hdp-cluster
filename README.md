@@ -37,6 +37,10 @@ You can easily customize the scipt to suit your local host's hardware requiremen
 		$ vagrant up
 
 3) Browse http://one.vm:8080/
+```
+		Login: admin
+		Password: admin
+```
 
 4) Follow the installation wizard
 ```
@@ -47,6 +51,8 @@ You can easily customize the scipt to suit your local host's hardware requiremen
 			two.vm
 			three.vm
 			four.vm
+
+			Select Perform manual registration, No SSH
 		- Assign Masters 
      		evenly distribute services across your VMs considering hardware requirements
      	Assign Slaves and Clients

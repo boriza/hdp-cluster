@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     one.vm.provision :hostmanager
     one.vm.network :private_network, ip: "192.168.111.1"
     one.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--memory", 4096]
+      vb.customize ["modifyvm", :id, "--memory", 2048]
     end
 
     one.vm.provision "puppet" do |puppet|
@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     two.vm.provision :hostmanager
     two.vm.network :private_network, ip: "192.168.111.2"
     two.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--memory", 2048]
+      vb.customize ["modifyvm", :id, "--memory", 6144]
     end
 
     two.vm.provision "puppet" do |puppet|
@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     three.vm.provision :hostmanager
     three.vm.network :private_network, ip: "192.168.111.3"
     three.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--memory", 2048]
+      vb.customize ["modifyvm", :id, "--memory", 6144]
     end
 
     three.vm.provision "puppet" do |puppet|

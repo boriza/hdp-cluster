@@ -3,25 +3,25 @@ class etchosts ($ownhostname) {
   host { 'host_one':
     name  => 'one.vm',
     alias => ['one', 'one.vm'],
-    ip    => '192.168.1.101'
+    ip    => '192.168.111.1'
   }
 
   host { 'host_two':
     name  => 'two.vm',
     alias => ['two', 'two.vm'],
-    ip    => '192.168.1.102'
+    ip    => '192.168.111.2'
   }
 
   host { 'host_three':
     name  => 'three.vm',
     alias => ['three', 'three.vm'],
-    ip    => '192.168.1.103'
+    ip    => '192.168.111.3'
   }
 
   host { 'host_four':
     name  => 'four.vm',
     alias => ['four', 'four.vm'],
-    ip    => '192.168.1.104'
+    ip    => '192.168.111.4'
   }
 
   file { 'agent_hostname':

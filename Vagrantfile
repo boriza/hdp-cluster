@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :one do |one| 
     one.vm.hostname = "one.vm"
     one.vm.provision :hostmanager
-    one.vm.network :private_network, ip: "192.168.111.1"
+    one.vm.network :private_network, ip: "192.168.111.11"
     one.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 2048]
     end
@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :two do |two| 
     two.vm.hostname = "two.vm"
     two.vm.provision :hostmanager
-    two.vm.network :private_network, ip: "192.168.111.2"
+    two.vm.network :private_network, ip: "192.168.111.12"
     two.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 6144]
     end
@@ -45,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :three do |three| 
     three.vm.hostname = "three.vm"
     three.vm.provision :hostmanager
-    three.vm.network :private_network, ip: "192.168.111.3"
+    three.vm.network :private_network, ip: "192.168.111.13"
     three.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 6144]
     end
@@ -60,7 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :four do |four| 
     four.vm.hostname = "four.vm"
     four.vm.provision :hostmanager
-    four.vm.network :private_network, ip: "192.168.111.4"
+    four.vm.network :private_network, ip: "192.168.111.14"
     four.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", 2048]
     end

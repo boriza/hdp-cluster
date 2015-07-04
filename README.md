@@ -5,11 +5,11 @@ The script is going to automatically create and start four VirtualBox CentOS VMs
 
 VM configuration:
 		
-		one.vm - 4Gb RAM, 1 x core
-		two.vm - 2Gb RAM, 1 x core
-		three.vm - 2Gb RAM, 1 x core
-		four.vm - 2Gb RAM, 1 x core
-You can easily customize the scipt to suit your local host's hardware requirements
+		one.vm - 2Gb RAM, 1 x core
+		two.vm - 6Gb RAM, 1 x core
+		three.vm - 6Gb RAM, 1 x core
+		four.vm - 2Gb RAM, 1 x core 
+You can easily customize the scipt to suit your local host's hardware requirements. Also during the HDP installation you don't have to use all VMs. e.g., you can install on vm 1 to 3
 
 
 # Pre-requisites:
